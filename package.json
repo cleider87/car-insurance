@@ -1,0 +1,9 @@
+{
+  "name": "car-insurance",
+  "version": "1.0.0",
+  "description": "Car Insurance",
+  "main": "index.js",
+  "author": "Cleider Herrera <cleider87@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
