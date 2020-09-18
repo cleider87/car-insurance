@@ -1,4 +1,4 @@
-# CAR INSURANCE
+# CAR INSURANCE [![Build Status](https://travis-ci.org/cleider87/car-insurance.svg?branch=master)](https://travis-ci.org/cleider87/car-insurance)
 
 ## Requerimients
 
