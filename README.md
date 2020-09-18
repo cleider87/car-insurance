@@ -9,31 +9,25 @@
 
 ```sh
 # yarn or npm install
-yarn
+npm install
 ```
 
 ## Scripts
 
-### Unit Test
+### Unit Test & Coverage
 
 ```sh
-yarn test
+npm run test
 ```
 
-### Coverage
+### Build (Clean and transpile dist)
 
 ```sh
-yarn coverage
+npm run build
 ```
 
-### Build (Transpile code)
+### Run App (after-30-days)
 
 ```sh
-yarn build
-```
-
-### Run App
-
-```sh
-yarn start
+npm run after-30-days
 ```
