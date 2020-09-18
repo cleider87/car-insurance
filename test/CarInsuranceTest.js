@@ -1,6 +1,7 @@
 const { expect } = require('chai');
 
 const CarInsurance = require('../src/business/CarInsurance');
+
 const Product = require('../src/business/Product');
 
 describe('CarInsurance Tests', () => {
@@ -12,6 +13,11 @@ describe('CarInsurance Tests', () => {
     new Product('Special Full Coverage', 15, 20),
     new Product('Super Sale', 10, 50),
     new Product('Mega Coverage', 0, 80),
+    // Invalid products
+    new Product('Full Coverage', 2, -10),
+    new Product('Super Sale', 10, 51),
+    new Product('Mega Coverage', 0, 81),
+    new Product('Mega Coverage', 0, 10),
   ]);
 
   beforeEach(() => {
@@ -40,5 +46,9 @@ describe('CarInsurance Tests', () => {
 
   it('"Mega Coverage" price should be 80 (6 days)', () => {
     expect(carInsuranceTest.products[5].price).equal(80);
+  });
+
+  it('CarInsurance should have 6 products', () => {
+    expect(carInsuranceTest.products.length).equal(6);
   });
 });
