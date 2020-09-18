@@ -17,6 +17,7 @@
   "scripts": {
     "lint": "eslint ./src",
     "test": "mocha",
+    "coverage": "istanbul cover mocha",
     "build": "babel ./src --out-dir bin",
     "start": "node bin/index.js"
   },
@@ -29,6 +30,7 @@
     "eslint": "^7.9.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
+    "istanbul": "^0.4.5",
     "mocha": "^8.1.3"
   }
 }

@@ -20,6 +20,12 @@ yarn
 yarn test
 ```
 
+### Coverage
+
+```sh
+yarn coverage
+```
+
 ### Build (Transpile code)
 
 ```sh
