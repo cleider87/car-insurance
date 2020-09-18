@@ -60,6 +60,18 @@ class Product {
       this.sellIn -= 1;
     }
   }
+
+  isValid() {
+    let isValid = true;
+    if (this.name === 'Mega Coverage') {
+      if (this.price !== 80) {
+        isValid = false;
+      }
+    } else if (this.price < 0 || this.price > 50) {
+      isValid = false;
+    }
+    return isValid;
+  }
 }
 
 module.exports = Product;
