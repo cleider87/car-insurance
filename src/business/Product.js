@@ -14,6 +14,9 @@ class Product {
     switch (this.name) {
       case 'Full Coverage':
         deacrese = false;
+        if (this.sellIn <= 0) {
+          velocity = 2;
+        }
         break;
       case 'Special Full Coverage':
         deacrese = false;
@@ -23,7 +26,7 @@ class Product {
         if (this.sellIn <= 5) {
           velocity = 3;
         }
-        if (this.sellIn === 0) {
+        if (this.sellIn <= 0) {
           anulation = true;
         }
         break;
@@ -45,8 +48,13 @@ class Product {
 
     if (!legendary) {
       if (deacrese === false && this.price < 50) {
-        this.price += velocity;
+        if ((this.price + velocity) < 50) {
+          this.price += velocity;
+        } else {
+          this.price = 50;
+        }
       }
+
       if (deacrese === true) {
         if ((this.price - velocity) > 0) {
           this.price -= velocity;
@@ -54,9 +62,11 @@ class Product {
           this.price = 0;
         }
       }
+
       if (anulation === true) {
         this.price = 0;
       }
+
       this.sellIn -= 1;
     }
   }

@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import Product from './business/Product';
+
 import CarInsurance from './business/CarInsurance';
 
 const productsAtDayZero = [
@@ -21,10 +22,13 @@ const productPrinter = (product) => {
 };
 
 console.log('OMGHAI!');
-
-for (let i = 1; i <= 30; i += 1) {
-  console.log(`Day ${i - 1}`);
+for (let i = 0; i <= 30; i += 1) {
+  console.log(`-------- day ${i} --------`);
   console.log('name, sellIn, price');
-  carInsurance.updatePrices().forEach(productPrinter);
+  if (i !== 0) {
+    carInsurance.updatePrices().forEach(productPrinter);
+  } else {
+    carInsurance.products.forEach(productPrinter);
+  }
   console.log('');
 }
