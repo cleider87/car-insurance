@@ -4,6 +4,11 @@ class Product {
     this.sellIn = sellIn;
     this.price = price;
   }
+
+  updatePrice() {
+    this.price -= 1;
+    this.sellIn -= 1;
+  }
 }
 
 module.exports = Product;
