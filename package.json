@@ -5,5 +5,30 @@
   "main": "index.js",
   "author": "Cleider Herrera <cleider87@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "engines": {
+    "node": ">=12"
+  },
+  "babel": {
+    "presets": [
+      "airbnb"
+    ]
+  },
+  "scripts": {
+    "lint": "eslint ./src",
+    "test": "mocha",
+    "build": "babel ./src --out-dir bin",
+    "start": "node bin/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-preset-airbnb": "^5.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "mocha": "^8.1.3"
+  }
 }
