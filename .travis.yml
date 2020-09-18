@@ -6,6 +6,8 @@ after_success:
 install:
   - npm install -g mocha
   - npm install -g istanbul
+  - npm install -g npm-run-all
   - npm install
-  - npm build
-  - npm run coverage
+  - npm run test
+  - npm run build
+  - npm run after-30-days
