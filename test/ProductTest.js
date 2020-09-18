@@ -41,12 +41,12 @@ describe('Price Product Tests', () => {
   });
 
   describe('"Full Coverage" Tests', () => {
-    it('updatePrice from 30 to 40 (after 10 days)', () => {
-      const productTest = new Product('Full Coverage', 20, 30);
-      for(let i=0;i<10;i+=1){
+    it('updatePrice from 0 to 50 (after 30 days)', () => {
+      const productTest = new Product('Full Coverage', 2, 0);
+      for(let i=0;i<30;i+=1){
         productTest.updatePrice();
       }
-      expect(productTest.price).equal(40);
+      expect(productTest.price).equal(50);
     });
   
     it('updatePrice from 30 to 50 (after 30 days)', () => {

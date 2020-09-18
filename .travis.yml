@@ -8,6 +8,6 @@ install:
   - npm install -g istanbul
   - npm install -g npm-run-all
   - npm install
-  - npm run test
+  - npm test
   - npm run build
   - npm run after-30-days

@@ -32,8 +32,8 @@ describe('CarInsurance Tests', () => {
     expect(carInsuranceTest.products[1].price).equal(3);
   });
 
-  it('"Full Coverage" price should be 3 (3 days)', () => {
-    expect(carInsuranceTest.products[2].price).equal(3);
+  it('"Full Coverage" price should be 4 (3 days)', () => {
+    expect(carInsuranceTest.products[2].price).equal(4);
   });
 
   it('"Special Full Coverage" price should be 24 (4 days)', () => {
