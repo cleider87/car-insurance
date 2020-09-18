@@ -17,10 +17,10 @@
   "scripts": {
     "lint": "eslint ./src",
     "test": "istanbul cover mocha",
-    "clean": "rimraf bin",
-    "transpile": "babel ./src --out-dir bin",
+    "clean": "rimraf dist",
+    "transpile": "babel ./src --out-dir dist",
     "build": "npm-run-all clean transpile",
-    "after-30-days": "node bin/index.js"
+    "after-30-days": "node dist/index.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",

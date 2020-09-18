@@ -9,5 +9,5 @@ install:
   - npm install -g npm-run-all
   - npm install
   - npm run test
-  - npm build
+  - npm run build
   - npm run after-30-days
